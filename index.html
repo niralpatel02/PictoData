@@ -14,6 +14,7 @@
         <h1 class="title">PictoData</h1>
         <h3 class="title">Providing creative visual representations of data</h3>
         <div id="bar" class="graph"></div>
+        <div id="bubble" class="graph"></div>
         <script>
         var a = new Graph()
         a.bar({
@@ -30,6 +31,23 @@
             'colours': ['Yellow', 'Purple']
         })
         a.removeData(1)
+        </script>
+        <script>
+        var b = new Graph()
+        b.bubble({
+            'Element': document.getElementById("bubble"),
+            'Data': [45, 10, 34, 65],
+            'Labels': ['Apples', 'Oranges', 'Pears', 'Pineapple'],
+            'colours': ['#3e7bde', '#cf8934', '#954bc9', 'Aqua'],
+            'height': 200,
+            'width': 500
+        })
+        b.addData({
+            'Data': [26],
+            'Labels': ['Banana'],
+            'colours': ['Yellow']
+        })
+        b.removeData(3)
         </script>
     </body>
 </html>
