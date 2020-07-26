@@ -11,28 +11,30 @@ Graph.prototype = {
 	    barGraph.style.position = 'relative'
 	    barGraph.style.width = '100%'
         barGraph.style.height = '100%'
-        barGraph.style.borderLeft = 'solid #000000'
-        barGraph.style.borderBottom = 'solid #000000'
+       // barGraph.style.borderLeft = 'solid #000000'
+       //barGraph.style.borderBottom = 'solid #000000'
 
         bars = document.createElement('div')
         bars.style.width = info['width'] + 'px'
         bars.style.height = (info['height']-20) + 'px'
-        bars.style.marginBottom = '20px'
+        //bars.style.marginBottom = '20px'
+        bars.style.borderLeft = 'solid #000000'
+        bars.style.borderBottom = 'solid #000000'
 
         labels = document.createElement('div')
         labels.style.height = '20px'
         labels.style.width = info['width']
-        labels.style.paddingTop = '10px'
+        //labels.style.paddingTop = '10px'
 
 	    info['Data'].forEach(function(value, index){
             bar = document.createElement('div')
-	        bar.style.width = '40px'
+	        bar.style.width = (info['width']/(info['Data'].length + 1)) + 'px'
 	        bar.style.height = ((info['height']-20)*(info['Data'][index]/largest_num))+ 'px'
 	        bar.style.backgroundColor = info['colours'][index]
 
 	        container = document.createElement('div')
 	        container.style.position = 'absolute'
-	        container.style.bottom = '0px'
+	        container.style.bottom = '20px'
 	        container.style.marginLeft = (index*(info['width']/info['Data'].length)) + 'px'
             container.style.float = 'left'
 	        container.append(bar)
@@ -41,6 +43,8 @@ Graph.prototype = {
 	        hover.style.position = 'absolute'
 	        hover.style.visibility = 'hidden'
 	        hover.style.width = '50px'
+	        hover.style.bottom = ((info['height']-20)*(info['Data'][index]/largest_num))+ 10 + 'px'
+	        hover.style.marginLeft = (info['width']/(info['Data'].length + 1))/4.5 + 'px'
 	        hover.style.backgroundColor = 'black'
 	        hover.style.color = '#fff'
 	        hover.style.textAlign = 'center'
