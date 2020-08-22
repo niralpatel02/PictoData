@@ -222,7 +222,7 @@
                 const column1 = document.createElement('td')
                 column1.style.backgroundColor = value
                 column1.style.color = value
-                column1.innerHTML = '..'
+                column1.innerHTML = '........'
                 const column2 = document.createElement('td')
                 column2.innerHTML = labels[index]
                 row.append(column1)
