@@ -7,16 +7,85 @@
 
         <link rel="stylesheet" href="styles.css">
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
         <script type="text/javascript" src='PictoData.js'></script>
+
+        <link rel="stylesheet" type="text/css" href="semantic-ui/semantic.min.css">
 
         <script type="text/javascript" src='examples.js'></script>
 
     </head>
-    <body>
-        <h1 class="title">Car Statistics Canada</h1>
-        <h3 class="title">Car accidents in Ontario per year</h3>
-        <div id="bar" class="graph"></div>
-        <h3 class="title">Cars sold by brands last month</h3>
-        <div id="bubble" class="graph"></div>
+    <body style="background-color:#5faed9;">
+        <div style="background-color:white;"class="ui secondary menu">
+            <a class="big ui button" href="index.html">
+                Home
+            </a>
+            <a class="active big ui button">
+                Examples
+            </a>
+            <a class="big ui button" href="documentation.html" style="margin-right: 100px">
+                Documentation
+            </a>
+        </div>
+
+        <h1 class="title">Bar graph</h1>
+        <h3 class="title">A bar graph creates bars proportionate to the numbers they represent.</h3>
+        <div id="bar" style="padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px; width: 800px;"class="ui centered card"></div>
+        <div style="padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px; width: 800px;" class="ui centered card">
+            <code>
+                const a = new Graph() <br>
+                a.bar({ <br>
+                'Element': $('#bar'),<br>
+                'Data': [42724, 38724, 40000, 36000],<br>
+                'Labels': ['2013', '2014', '2015', '2016'],<br>
+                'colours': ['#3e7bde', '#cf8934', '#954bc9', 'Aqua'],<br>
+                'height': 400,<br>
+                'width': 700<br>
+                })
+            </code>
+        </div>
+        <h1 class="title">Bubble Chart</h1>
+        <h3 class="title">A bubble chart creates circles proportionate to the numbers they represent.</h3>
+        <div id="bubble" style="padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px; width: 800px; "class="ui centered card"></div>
+        <div style="padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px; width: 800px;" class="ui centered card">
+            <code>
+                var b = new Graph() <br>
+                b.bubble({ <br>
+                'Element': $('#bubble'),<br>
+                'Data': [12065, 9454, 7538, 5904],<br>
+                'Labels': ['Toyota', 'Honda', 'Hyundai', 'Kia'],<br>
+                'colours': ['#3e7bde', '#cf8934', '#954bc9', 'Aqua'],<br>
+                'height': 400,<br>
+                'width': 700<br>
+                })
+            </code>
+        </div>
+        <h1 class="title">Word Chart</h1>
+        <h3 class="title">A word chart creates text with font size proportionate to the numbers they represent.</h3>
+        <div id="word" style="padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px; width: 800px; "class="ui centered card"></div>
+        <div style="padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px; width: 800px;" class="ui centered card">
+            <code>
+                var c = new Graph() <br>
+                c.word({ <br>
+                'Element': $('#word'),<br>
+                'Data': [12065, 9454, 7538, 5904],<br>
+                'Labels': ['Toyota', 'Honda', 'Hyundai', 'Kia'],<br>
+                'colours': ['#3e7bde', '#cf8934', '#954bc9', 'Aqua'],<br>
+                'height': 400,<br>
+                'width': 700<br>
+                })
+            </code>
+        </div>
+        <h1 class="title">Graph Legend</h1>
+        <h3 class="title">A legend which displays which color is associated with which label.</h3>
+        <div id="legend" style="padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px; width: 800px; "class="ui centered card"></div>
+        <div style="padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px; width: 800px;" class="ui centered card">
+            <code>
+                var d = new Graph() <br>
+                // ...create a graph <br>
+                c.createLegend($('legend'))
+            </code>
+        </div>
     </body>
 </html>

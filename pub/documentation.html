@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>PictoData</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="styles.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="semantic-ui/semantic.min.css">
+
+    </head>
+    <body style="background-color:#5faed9;">
+        <div style="background-color:white;"class="ui secondary menu">
+            <a class="big ui button" href="index.html">
+                Home
+            </a>
+            <a class="big ui button" href="examples.html">
+                Examples
+            </a>
+            <a class="active big ui button" style="margin-right: 100px">
+                Documentation
+            </a>
+        </div>
+        <h2 class="title">Getting started</h2>
+        <div style="padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 20px; width: 800px;" class="ui centered card">
+            First, you'll want to download the library files and place them into your repository (link can be found on the homepage).
+            <br> <br>
+            After that, all you need to do is include the js file for PictoData and jQuery (jQuery is a requirement for PictoData).
+            <br> <br>
+            This would look something like this:
+        </div>
+        <div style="padding-left: 50px; padding-right: 50px; padding-top: 20px; padding-bottom: 20px; width: 800px;" class="ui centered card">
+            <code>
+                &lt;script type="text/javascript" src='PictoData.js'&gt;&lt;/script&gt;
+                <br>
+                &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;
+            </code>
+        </div>
+        <div style="padding-left: 50px; padding-right: 50px; padding-top: 20px; padding-bottom: 20px; width: 800px;" class="ui centered card">
+            You can now start creating your graphs using PictoData. Examples of this can be found under the 'Examples' tab.
+        </div>
+        <h2 class="title">Methods</h2>
+        <div style="padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px; width: 800px;" class="ui centered card">
+            <table class="ui celled table">
+                <thead>
+                <tr><th>Method</th>
+                    <th>Parameter</th>
+                    <th>Description</th>
+                </tr></thead>
+                <tbody>
+                <tr>
+                    <td>pictodata.bar(info)</td>
+                    <td>
+                        <code>
+                            { <br>
+                            'Element': object, <br>
+                            'Data': [integer], <br>
+                            'Labels': [String], <br>
+                            'colours': [String], <br>
+                            'height': integer, <br>
+                            'width': integer <br>
+                            }
+                        </code>
+                    </td>
+                    <td>Creates a bar graph using information provided by the 'info' parameter.</info></td>
+                </tr>
+                <tr>
+                    <td>pictodata.bubble(info)</td>
+                    <td>
+                        <code>
+                            { <br>
+                            'Element': object, <br>
+                            'Data': [integer], <br>
+                            'Labels': [String], <br>
+                            'colours': [String], <br>
+                            'height': integer, <br>
+                            'width': integer <br>
+                            }
+                        </code>
+                    </td>
+                    <td>Creates a bubble chart using information provided by the 'info' parameter.</info></td>
+                </tr>
+                <tr>
+                    <td>pictodata.word(info)</td>
+                    <td>
+                        <code>
+                            { <br>
+                            'Element': object, <br>
+                            'Data': [integer], <br>
+                            'Labels': [String], <br>
+                            'colours': [String], <br>
+                            'height': integer, <br>
+                            'width': integer <br>
+                            }
+                        </code>
+                    </td>
+                    <td>Creates a word chart using information provided by the 'info' parameter.</info></td>
+                </tr>
+                <tr>
+                    <td>pictodata.addData(info)</td>
+                    <td>
+                        <code>
+                            { <br>
+                            'Data': [integer],
+                            'Labels': [String],
+                            'colours': [String] <br>
+                            }
+                        </code>
+                    </td>
+                    <td>Adds data to the current graph using information provided by the info parameter.</td>
+                </tr>
+                <tr>
+                    <td>pictodata.removeData(info)</td>
+                    <td>Integer</td>
+                    <td>Removes data from the current graph using the index provided by the info parameter.</td>
+                </tr>
+                <tr>
+                    <td>pictodata.createLegend(info)</td>
+                    <td>object</td>
+                    <td>Creates a legend for the current graph and places it in the element provided by the info parameter.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
