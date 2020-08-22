@@ -6,7 +6,7 @@
         this.graph = undefined;
     }
     PictoData.prototype = {
-    
+
         bar: function(info) {
 
             const largest_num = Math.max.apply(Math, info['Data'])
@@ -221,6 +221,7 @@
                 const row = document.createElement('tr')
                 const column1 = document.createElement('td')
                 column1.style.backgroundColor = value
+                column1.innerHTML = 'HI'
                 const column2 = document.createElement('td')
                 column2.innerHTML = labels[index]
                 row.append(column1)
